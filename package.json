@@ -10,7 +10,7 @@
   },
 "engines": {
     "node": "^8.9.4"
-  }
+  },
   "devDependencies": {
 	"nodemon": "^1.14.12"
 },

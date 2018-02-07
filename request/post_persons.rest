@@ -1,7 +1,7 @@
-POST http://localhost:3001/persons 
+POST https://luetteloback.herokuapp.com/api/persons
 Content-Type: application/json
 
 {
-    "name": "J Mandoliini",
+    "name": "Meikä Mandoliini",
     "number": "050505050"
 }

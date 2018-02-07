@@ -7,7 +7,7 @@ var morgan = require('morgan')
 const bodyParser = require('body-parser')
 
 const cors = require('cors')
-
+var path = require('path')
 
 const logger = (request, response, next) => {
   console.log('Method:',request.method)
@@ -19,6 +19,8 @@ const logger = (request, response, next) => {
 
 
 
+
+
 app.use(bodyParser.json())
 
 app.use(cors())
@@ -26,6 +28,8 @@ app.use(cors())
 app.use(logger)
 
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms'))
+
+app.use(express.static('build'))
 
 let persons = [
   {
@@ -57,6 +61,8 @@ const info = () => {
     new Date()
   )
 }
+
+
 
 app.get('/api/persons', (req, res) => {
   res.json(persons)

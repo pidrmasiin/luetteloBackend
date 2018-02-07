@@ -1,21 +1,28 @@
 {
-  "name": "puhelinluettelo",
-  "version": "0.0.1",
-  "description": "",
+  "name": "luetteloback",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "back.js",
-  "scripts": {
-    "start": "node back.js",
-    "watch": "nodemon back.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Petteri Pääkkönen",
-  "license": "MIT",
   "dependencies": {
     "cors": "^2.8.4",
     "express": "^4.16.2",
     "morgan": "^1.9.0"
   },
   "devDependencies": {
-    "nodemon": "^1.14.12"
-  }
+	"nodemon": "^1.14.12"
+},
+  "scripts": {
+    "start": "node back.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pidrmasiin/luetteloBackend.git"
+  },
+  "author": "Petteri Pääkkönen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pidrmasiin/luetteloBackend/issues"
+  },
+  "homepage": "https://github.com/pidrmasiin/luetteloBackend#readme"
 }

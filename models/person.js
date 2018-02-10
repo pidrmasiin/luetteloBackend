@@ -9,11 +9,8 @@ const url = process.env.luetteloDB
 mongoose.connect(url)
 
 const Person = mongoose.model('Person', {
-    name: String,
-    number: String
-  })
-  
-  
+  name: String,
+  number: String
+})
 
-  module.exports = Person
-  
+module.exports = Person

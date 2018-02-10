@@ -91,7 +91,7 @@ app.post('/api/persons', (request, response) => {
     .find({})
     .then(person => {
       const persons = person.filter(one => one.name === body.name)
-      if (body.name === undefined || body.number === undefined) {
+      if (body.name === undefined || body.name.length < 1 || body.number === undefined || body.number.length < 1) {
         return response.status(400).json({ error: 'name or number missing' })
       }if(persons.length > 0){
         return response.status(400).json({ error: 'name must be unique' })

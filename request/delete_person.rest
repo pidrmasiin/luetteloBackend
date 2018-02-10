@@ -1,2 +1,3 @@
-DELETE https://luetteloback.herokuapp.com/api/persons/6538613335
+DELETE http://localhost:3001/api/persons/5a7f25fd8ff0dc2441d37b2f
+
 

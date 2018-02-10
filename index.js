@@ -97,19 +97,18 @@ app.post('/api/persons', (request, response) => {
         return response.status(400).json({ error: 'name must be unique' })
       }if(Array.isArray(body.number)){
         return response.status(400).json({ error: 'only one number allowed' })
-      }
-    })
-    .then(person => {
-      const personNew = new Person({
-        name: body.name,
-        number: body.number,
-        id: Math.floor(Math.random() * Math.floor(10000000000))
-      })
-      personNew
-        .save()
-        .then(savedPerson => {
-          response.json(formatPerson(savedPerson))
+      }else{
+        const person = new Person({
+          name: body.name,
+          number: body.number,
+          id: Math.floor(Math.random() * Math.floor(10000000000))
         })
+        person
+          .save()
+          .then(savedPerson => {
+            response.json(formatPerson(savedPerson))
+          })
+      }
     })
 })
 

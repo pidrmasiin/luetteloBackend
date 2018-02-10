@@ -1,7 +1,11 @@
 const mongoose = require('mongoose')
 
+if ( process.env.NODE_ENV !== 'production' ) {
+  require('dotenv').config()
+}
 const url = process.env.luetteloDB
-console.log(url)
+
+
 mongoose.connect(url)
 
 const Person = mongoose.model('Person', {
